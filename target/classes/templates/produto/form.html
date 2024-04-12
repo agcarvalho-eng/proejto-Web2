@@ -1,11 +1,40 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout(~{::head},~{::main})}">
+    <head th:replace="~{fragments/head :: head(~{})}">
+        <title>Cadastro de produto</title>
+    </head>
+    <body>
+        <main>
 
+            <form class="container" th:action="${produto.id == null} ? @{/produto/save} : @{/produto/update}"
+                  th:object="${produto}" method="post">
+
+                <div class="form-row">
+                    <div class="mb-2 col-lg-6">
+                        <input type="hidden" th:field="*{id}">
+                        <input class="form-control" type="text" th:field="*{descricao}" placeholder="Descrição">
+                    </div>
+                    <div class="mb-2 col-lg-6">
+                        <input class="form-control" type="text" th:field="*{valor}" placeholder="Valor">
+                    </div>
+                    <div class="mb-2 col-lg-6">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
+
+
+<!--
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Salvando ou atualizando produtos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/estilo1.css"> <!-- Adicionando o arquivo CSS externo -->
+        <link rel="stylesheet" href="/estilo1.css">
     </head>
     <body>
         <header>
@@ -16,7 +45,7 @@
         </header>
 
         <nav class="menu">
-            <a href="/index.html">Home</a>
+            <a href="/templates/index.html">Home</a>
             <a th:href="@{/pessoaFisica/form}">Cadastrar Cliente PF</a>
             <a th:href="@{/pessoaJuridica/form}">Cadastrar Cliente PJ</a>
             <a th:href="@{/produto/form}">Cadastrar Produto</a>
@@ -39,5 +68,5 @@
             <p>&copy; 2024 VENDA FÁCIL - Empresa de Venda de Produtos. Todos os direitos reservados.</p>
         </footer>
     </body>
-</html>
+</html> -->
 

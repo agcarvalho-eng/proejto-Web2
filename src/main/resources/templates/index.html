@@ -1,10 +1,38 @@
 <!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout(~{::head},~{::main})}">
+    <head th:replace="~{fragments/head :: head(~{})}">
+        <meta charset="UTF-8">
+        <title>Página inicial - Home</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <h2>Sobre Nossa Empresa</h2>
+                <br>
+                <p>
+                    Foi no coração de uma pequena cidade, onde sonhos ganhavam asas e
+                    empreendedores vislumbravam oportunidades. Foi nesse cenário que nasceu a
+                    VENDA FÁCIL, uma empresa que se tornaria um ícone de sucesso no mundo das vendas.
+                </p>
+                <p>
+                    Hoje, a VENDA FÁCIL é uma marca consolidada, sinônimo de qualidade, confiança e
+                    inovação. Com uma equipe dedicada e uma visão clara do futuro, a empresa
+                    continua a crescer e a inspirar outros empreendedores a perseguir seus sonhos.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
 <html xmls:th="http://www.thymeleaf.org" xmlns:xmls="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa de Venda de Produtos Diversos</title>
-    <link rel="stylesheet" href="/estilo1.css"> <!-- Adicionando o arquivo CSS externo -->
+    <link rel="stylesheet" href="/estilo1.css">
 </head>
 <body>
 
@@ -45,4 +73,4 @@
 </footer>
 
 </body>
-</html>
+</html> -->
