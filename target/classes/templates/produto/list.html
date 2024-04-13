@@ -20,10 +20,10 @@
                     <tr th:each="p : ${produtos}">
                         <td th:text="${p.id}"> </td>
                         <td th:text="${p.descricao}"></td>
-                        <td th:text="${p.valor}"> </td>
-                        <td> <a th:href="@{/produto/edit/{id}(id=${p.id})}">Editar</a> </td>
-                        <td> <a onclick="return window.confirm('Tem certeza que deseja excluir este registro?')"
-                                th:href="@{/produto/remove/{id}(id=${p.id})}">Excluir</a> </td>
+                        <td th:text="${#numbers.formatDecimal(p.valor, 1, 2)}"> </td>
+                        <td> <a class="btn btn-primary" th:href="@{/produto/edit/{id}(id=${p.id})}" role="button">Editar</a> </td>
+                        <td> <a class="btn btn-danger" onclick="return window.confirm('Tem certeza que deseja excluir este registro?')"
+                                th:href="@{/produto/remove/{id}(id=${p.id})}" role="button">Excluir</a> </td>
                     </tr>
                 </tbody>
             </table>
