@@ -22,11 +22,11 @@
                     <tr th:each="venda : ${vendas}">
                         <td th:text="${venda.id}"></td>
                         <td th:text="${venda.pessoa.nome}"></td>
-                        <td th:text="${venda.data}"></td>
-                        <td th:text="${venda.totalVenda()}"></td>
-                        <td> <a th:href="@{/venda/detail/{id}(id=${venda.id})}">Detalhar</a> </td>
-                        <td> <a onclick="return window.confirm('Tem certeza que deseja excluir esta ' +
-                         'venda?')"  th:href="@{/venda/remove/{id}(id=${venda.id})}">Excluir</a> </td>
+                        <td th:text="${#dates.format(venda.data, 'dd/MM/yyyy')} + ' -- ' + ${#dates.format(venda.data, 'HH:mm:ss')}"></td>
+                        <td th:text="${#numbers.formatDecimal(venda.totalVenda(), 1, 2)}"></td>
+                        <td> <a class="btn btn-primary" th:href="@{/venda/detail/{id}(id=${venda.id})}" role="button">Detalhar</a> </td>
+                        <td> <a class="btn btn-danger" onclick="return window.confirm('Tem certeza que deseja excluir esta ' +
+                         'venda?')"  th:href="@{/venda/remove/{id}(id=${venda.id})}" role="button">Excluir</a> </td>
                     </tr>
                 </tbody>
             </table>

@@ -1,5 +1,12 @@
 
 .nav-link:hover {
-    background-color: lightblue; /* Mudar para a cor desejada ao passar o mouse */
+    background-color: #808080;
 }
 
+.nav-bg-color {
+    background-color: darkslategray;
+}
+
+.bg-cabecalho {
+    background-color: darkgray;
+}

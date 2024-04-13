@@ -5,6 +5,10 @@
     </head>
     <body>
         <main>
+            <br>
+            <h4 class="container" th:text="${pessoaJuridica.id == null ? 'Cadastrando um novo cliente Pessoa Jurídica' :
+            'Editando um cliente Pessoa Jurídica existente'}"></h4>
+            <br>
             <form class="container" th:action="${pessoaJuridica.id == null} ? @{/pessoaJuridica/save} : @{/pessoaJuridica/update}"
                   th:object="${pessoaJuridica}" method="post">
 

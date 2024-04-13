@@ -8,11 +8,11 @@ insert into produto (descricao, valor) values ('Suco uva', 6.50);
 insert into produto (descricao, valor) values ('Vodka Smirnoff', 9.00);
 
 --Insert na tabela Venda.
-insert into Venda (data, pessoa_id) values (current_date, 1);
-insert into Venda (data, pessoa_id) values (current_date, 2);
-insert into Venda (data, pessoa_id) values (current_date, 1);
-insert into Venda (data, pessoa_id) values (current_date, 3);
-insert into Venda (data, pessoa_id) values (current_date, 4);
+insert into Venda (data, pessoa_id) values (current_timestamp, 1);
+insert into Venda (data, pessoa_id) values (current_timestamp, 2);
+insert into Venda (data, pessoa_id) values (current_timestamp, 1);
+insert into Venda (data, pessoa_id) values (current_timestamp, 3);
+insert into Venda (data, pessoa_id) values (current_timestamp, 4);
 
 -- Insert na tabela item_Venda.
 insert into item_Venda (produto_id, quantidade, venda_id) values (1, 1, 1);
