@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout(~{::head},~{::main})}">
-    <head th:replace="~{fragments/head :: head(~{})}">
+    <head th:replace="~{fragments/head :: head(~{},~{::title})}">
         <title>Cadastro de produto</title>
     </head>
     <body>

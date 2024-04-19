@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout(~{::head},~{::main})}">
-    <head th:replace="~{fragments/head :: head(~{})}">
+    <head th:replace="~{fragments/head :: head(~{},~{::title})}">
         <meta charset="UTF-8">
         <title>Página inicial - Home</title>
     </head>
@@ -8,7 +8,6 @@
         <main>
             <div class="container">
                 <h2>Sobre Nossa Empresa</h2>
-                <br>
                 <p>
                     Foi no coração de uma pequena cidade, onde sonhos ganhavam asas e
                     empreendedores vislumbravam oportunidades. Foi nesse cenário que nasceu a
