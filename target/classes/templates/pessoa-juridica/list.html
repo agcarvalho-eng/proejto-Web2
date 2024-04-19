@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout(~{::head},~{::main})}">
-    <head th:replace="~{fragments/head :: head(~{})}">
+    <head th:replace="~{fragments/head :: head(~{},~{::title})}">
         <title>Relatório Pessoas Jurídicas</title>
     </head>
     <body>
@@ -8,7 +8,7 @@
             <h3>Relatório de Clientes Pessoa Jurídica</h3>
             <br>
             <table class="table" border="1">
-                <thead>
+                <thead style="background-color: #f5f5dc;">
                     <tr>
                         <th>PJ ID</th>
                         <th>Nome</th>
